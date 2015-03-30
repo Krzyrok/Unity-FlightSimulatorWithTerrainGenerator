@@ -12,50 +12,74 @@ namespace MapLoader
 {
     public partial class Form1 : Form
     {
-        int[] Pixels = null;
+        int[] Pixels = null;        // for ".raw" map files
+        int[,] Pixels2D = null;     // for other map files
+        int MapWidth = 0;
+        int MapHeight = 0;
 
         public Form1()
         {
             InitializeComponent();
+
+            setButtons(true, false, false);
         }
 
         private void buttonSelect_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                Bitmap bitmap = (Bitmap)Image.FromFile(openFileDialog1.FileName);
+                string fileName = openFileDialog1.SafeFileName;
 
-                int width = bitmap.Width;
-                int height = bitmap.Height;
+                if (fileName.Contains(".raw"))
+                {
+                    setButtons(false, true, true);
 
-                Pixels = null;
-                Pixels = new int[width * height + 2];
-                Pixels[0] = width;
-                Pixels[1] = height;
+                    byte[] buffer = System.IO.File.ReadAllBytes(openFileDialog1.FileName);
 
-                Color pixel;
+                    Pixels = new int[buffer.Length/3];
 
-
-                for (int x = 0; x < width; x++)
-                for (int y = 0; y < height; y++)
-                    //for (int x = 0; x < width; x++)
+                    int j = 0;
+                    for (int i = 0; i < buffer.Length; i+=3)
                     {
-                        pixel = bitmap.GetPixel(x, y);
-                        Pixels[x + y + 2] = pixel.R;
+                        Pixels[j] = buffer[i];
+                        j++;
                     }
 
-                        bitmap.Dispose();
+                    Output.Text += "Raw map successfully loaded.\n";
+                }
+                else if (fileName.Contains(".jpg") || fileName.Contains(".jpeg") || fileName.Contains(".bmp") ||
+                          fileName.Contains(".gif") || fileName.Contains(".png") || fileName.Contains(".tiff"))
+                {
+                    setButtons(false, true, true);
 
-                string text = "Map " + width + " x " + height + "  successfully loaded.\n";
-                Output.Text += text;
+                    Bitmap bitmap = (Bitmap)Image.FromFile(openFileDialog1.FileName);
+                    
+                    MapWidth = bitmap.Width;
+                    MapHeight = bitmap.Height;
+
+                    Pixels2D = new int[MapWidth, MapHeight];
+
+                    Color pixel;
+
+                    for (int x = 0; x < MapWidth; x++)
+                        for (int y = 0; y < MapHeight; y++)
+                        {
+                            pixel = bitmap.GetPixel(x, y);
+                            Pixels2D[x,y] = pixel.R;
+                        }
+
+                    bitmap.Dispose();
+
+                    Output.Text += "Map " + MapWidth + " x " + MapHeight + "  successfully loaded.\n";
+                }
+                else
+                    Output.Text += "File format not supported.\n";
             }
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            if(Pixels == null)
-                Output.Text += "There is no data to save.\n";
-            else
+            if (Pixels != null)
             {
                 string filePath = "../../../../Data/map.txt";
                 System.IO.StreamWriter file = new System.IO.StreamWriter(filePath);
@@ -67,6 +91,39 @@ namespace MapLoader
 
                 Output.Text += "Data successfully saved into file map.txt.\n";
             }
+            else if (Pixels2D != null)
+            {
+                string filePath = "../../../../Data/map.txt";
+                System.IO.StreamWriter file = new System.IO.StreamWriter(filePath);
+
+                //file.WriteLine(Pixels2D.GetLength(0));    // MapWidth
+                //file.WriteLine(Pixels2D.GetLength(1));    // MapHeight
+
+                for (int j = 0; j < Pixels2D.GetLength(1); j++)     // MapHeight
+                    for (int i = 0; i < Pixels2D.GetLength(0); i++) // MapWidth
+                        file.WriteLine(Pixels2D[i,j]);
+
+                file.Close();
+
+                Output.Text += "Data successfully saved into file map.txt.\n";
+            }
+            else
+                Output.Text += "There is no data to save.\n";
+        }
+
+        private void buttonUnload_Click(object sender, EventArgs e)
+        {
+            Pixels = null;
+            Pixels2D = null;
+
+            setButtons(true, false, false);
+        }
+
+        private void setButtons(bool bSelect, bool bUnload, bool bSave)
+        {
+            buttonSelect.Enabled = bSelect;
+            buttonUnload.Enabled = bUnload;
+            buttonSave.Enabled = bSave;
         }
     }
 }

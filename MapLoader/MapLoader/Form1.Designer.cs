@@ -32,6 +32,7 @@
             this.buttonSelect = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.buttonUnload = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Output
@@ -44,7 +45,7 @@
             // 
             // buttonSelect
             // 
-            this.buttonSelect.Location = new System.Drawing.Point(52, 23);
+            this.buttonSelect.Location = new System.Drawing.Point(23, 23);
             this.buttonSelect.Name = "buttonSelect";
             this.buttonSelect.Size = new System.Drawing.Size(94, 41);
             this.buttonSelect.TabIndex = 1;
@@ -54,7 +55,7 @@
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(226, 23);
+            this.buttonSave.Location = new System.Drawing.Point(251, 23);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(94, 41);
             this.buttonSave.TabIndex = 3;
@@ -66,11 +67,22 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // buttonUnload
+            // 
+            this.buttonUnload.Location = new System.Drawing.Point(137, 23);
+            this.buttonUnload.Name = "buttonUnload";
+            this.buttonUnload.Size = new System.Drawing.Size(94, 41);
+            this.buttonUnload.TabIndex = 4;
+            this.buttonUnload.Text = "Unload map";
+            this.buttonUnload.UseVisualStyleBackColor = true;
+            this.buttonUnload.Click += new System.EventHandler(this.buttonUnload_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(372, 296);
+            this.Controls.Add(this.buttonUnload);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonSelect);
             this.Controls.Add(this.Output);
@@ -86,6 +98,7 @@
         private System.Windows.Forms.Button buttonSelect;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button buttonUnload;
     }
 }
 
