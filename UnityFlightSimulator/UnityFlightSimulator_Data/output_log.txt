@@ -1,10 +1,10 @@
 Initialize engine version: 5.0.0f4 (5b98b70ebeb9)
 GfxDevice: creating device client; threaded=1
 Direct3D:
-    Version:  Direct3D 11.0 [level 10.1]
-    Renderer: ATI Radeon HD 4800 Series  (ID=0x9442)
-    Vendor:   ATI
-    VRAM:     506 MB
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics (ID=0x156)
+    Vendor:   Intel
+    VRAM:     128 MB
 Begin MonoManager ReloadAssembly
 Platform assembly: E:\UFS repository\UnityFlightSimulator\UnityFlightSimulator_Data\Managed\UnityEngine.dll (this message is harmless)
 Loading E:\UFS repository\UnityFlightSimulator\UnityFlightSimulator_Data\Managed\UnityEngine.dll into Unity Child Domain
@@ -14,12 +14,25 @@ Platform assembly: E:\UFS repository\UnityFlightSimulator\UnityFlightSimulator_D
 Loading E:\UFS repository\UnityFlightSimulator\UnityFlightSimulator_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: E:\UFS repository\UnityFlightSimulator\UnityFlightSimulator_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading E:\UFS repository\UnityFlightSimulator\UnityFlightSimulator_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.213 seconds
-desktop: 1440x900 60Hz; virtual: 1440x900 at 0,0
+Platform assembly: E:\UFS repository\UnityFlightSimulator\UnityFlightSimulator_Data\Managed\System.Data.dll (this message is harmless)
+Loading E:\UFS repository\UnityFlightSimulator\UnityFlightSimulator_Data\Managed\System.Data.dll into Unity Child Domain
+Platform assembly: E:\UFS repository\UnityFlightSimulator\UnityFlightSimulator_Data\Managed\System.Drawing.dll (this message is harmless)
+Loading E:\UFS repository\UnityFlightSimulator\UnityFlightSimulator_Data\Managed\System.Drawing.dll into Unity Child Domain
+Platform assembly: E:\UFS repository\UnityFlightSimulator\UnityFlightSimulator_Data\Managed\System.Windows.Forms.dll (this message is harmless)
+Loading E:\UFS repository\UnityFlightSimulator\UnityFlightSimulator_Data\Managed\System.Windows.Forms.dll into Unity Child Domain
+- Completed reload, in  0.704 seconds
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
+XInput1_3.dll not found.
 <RI> Input initialized.
 <RI> Initialized touch support.
 Platform assembly: E:\UFS repository\UnityFlightSimulator\UnityFlightSimulator_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: E:\UFS repository\UnityFlightSimulator\UnityFlightSimulator_Data\Managed\System.dll (this message is harmless)
+Platform assembly: E:\UFS repository\UnityFlightSimulator\UnityFlightSimulator_Data\Managed\Accessibility.dll (this message is harmless)
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1713)
+
 Awake
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
@@ -32,23 +45,48 @@ Start
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
+Platform assembly: E:\UFS repository\UnityFlightSimulator\UnityFlightSimulator_Data\Managed\Mono.Posix.dll (this message is harmless)
+Fallback handler could not load library E:/UFS repository/UnityFlightSimulator/UnityFlightSimulator_Data/Mono/libc
+Fallback handler could not load library E:/UFS repository/UnityFlightSimulator/UnityFlightSimulator_Data/Mono/.\libc
+Fallback handler could not load library E:/UFS repository/UnityFlightSimulator/UnityFlightSimulator_Data/Mono/libc
+Fallback handler could not load library E:/UFS repository/UnityFlightSimulator/UnityFlightSimulator_Data/Mono/libc
+Fallback handler could not load library E:/UFS repository/UnityFlightSimulator/UnityFlightSimulator_Data/Mono/.\libc
+Fallback handler could not load library E:/UFS repository/UnityFlightSimulator/UnityFlightSimulator_Data/Mono/libc
+Fallback handler could not load library E:/UFS repository/UnityFlightSimulator/UnityFlightSimulator_Data/Mono/libX11
+Fallback handler could not load library E:/UFS repository/UnityFlightSimulator/UnityFlightSimulator_Data/Mono/.\libX11
+Fallback handler could not load library E:/UFS repository/UnityFlightSimulator/UnityFlightSimulator_Data/Mono/libX11
+Fallback handler could not load library E:/UFS repository/UnityFlightSimulator/UnityFlightSimulator_Data/Mono/libX11
+Fallback handler could not load library E:/UFS repository/UnityFlightSimulator/UnityFlightSimulator_Data/Mono/.\libX11
+Fallback handler could not load library E:/UFS repository/UnityFlightSimulator/UnityFlightSimulator_Data/Mono/libX11
+Fallback handler could not load library E:/UFS repository/UnityFlightSimulator/UnityFlightSimulator_Data/Mono/libX11
+Fallback handler could not load library E:/UFS repository/UnityFlightSimulator/UnityFlightSimulator_Data/Mono/.\libX11
+Fallback handler could not load library E:/UFS repository/UnityFlightSimulator/UnityFlightSimulator_Data/Mono/libX11
+Fallback handler could not load library E:/UFS repository/UnityFlightSimulator/UnityFlightSimulator_Data/Mono/System/Library/Frameworks/Carbon.framework/Versions/Current/Carbon
+Fallback handler could not load library E:/UFS repository/UnityFlightSimulator/UnityFlightSimulator_Data/Mono/.\/System/Library/Frameworks/Carbon.framework/Versions/Current/Carbon
+Fallback handler could not load library E:/UFS repository/UnityFlightSimulator/UnityFlightSimulator_Data/Mono/System/Library/Frameworks/Carbon.framework/Versions/Current/Carbon
+Fallback handler could not load library E:/UFS repository/UnityFlightSimulator/UnityFlightSimulator_Data/Mono/lib/System/Library/Frameworks/Carbon.framework/Versions/Current/Carbon
+Fallback handler could not load library E:/UFS repository/UnityFlightSimulator/UnityFlightSimulator_Data/Mono/.\lib/System/Library/Frameworks/Carbon.framework/Versions/Current/Carbon
+Fallback handler could not load library E:/UFS repository/UnityFlightSimulator/UnityFlightSimulator_Data/Mono/lib/System/Library/Frameworks/Carbon.framework/Versions/Current/Carbon
+Platform assembly: E:\UFS repository\UnityFlightSimulator\UnityFlightSimulator_Data\Managed\System.Xml.dll (this message is harmless)
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1a38 -> priority: 1 
+  Thread -> id: 230c -> priority: 1 
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
 OnGUI
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
-Shader 'Nature/Terrain/Specular': fallback shader 'Nature/Terrain/Diffuse' not found
-Shader 'Nature/Terrain/Standard': fallback shader 'Nature/Terrain/Diffuse' not found
+OnGUI
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
 OnDisable
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
-UnloadTime: 1.459333 ms
+UnloadTime: 1.388907 ms
 
-Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 226.
-Total: 0.681022 ms (FindLiveObjects: 0.037155 ms CreateObjectMapping: 0.018088 ms MarkObjects: 0.191155 ms  DeleteObjects: 0.426800 ms)
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 222.
+Total: 1.385486 ms (FindLiveObjects: 0.022806 ms CreateObjectMapping: 0.018245 ms MarkObjects: 0.618052 ms  DeleteObjects: 0.725812 ms)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1970 -> priority: 1 
+  Thread -> id: 1dec -> priority: 1 
