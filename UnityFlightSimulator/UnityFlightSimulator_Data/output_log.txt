@@ -20,7 +20,7 @@ Platform assembly: E:\UFS repository\UnityFlightSimulator\UnityFlightSimulator_D
 Loading E:\UFS repository\UnityFlightSimulator\UnityFlightSimulator_Data\Managed\System.Drawing.dll into Unity Child Domain
 Platform assembly: E:\UFS repository\UnityFlightSimulator\UnityFlightSimulator_Data\Managed\System.Windows.Forms.dll (this message is harmless)
 Loading E:\UFS repository\UnityFlightSimulator\UnityFlightSimulator_Data\Managed\System.Windows.Forms.dll into Unity Child Domain
-- Completed reload, in  0.704 seconds
+- Completed reload, in  0.406 seconds
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 XInput1_3.dll not found.
@@ -69,8 +69,7 @@ Fallback handler could not load library E:/UFS repository/UnityFlightSimulator/U
 Fallback handler could not load library E:/UFS repository/UnityFlightSimulator/UnityFlightSimulator_Data/Mono/lib/System/Library/Frameworks/Carbon.framework/Versions/Current/Carbon
 Platform assembly: E:\UFS repository\UnityFlightSimulator\UnityFlightSimulator_Data\Managed\System.Xml.dll (this message is harmless)
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 230c -> priority: 1 
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+  Thread -> id: 2244 -> priority: 1 
 OnGUI
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
@@ -79,14 +78,15 @@ OnGUI
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
 OnDisable
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
-UnloadTime: 1.388907 ms
+UnloadTime: 1.392899 ms
 
 Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 222.
-Total: 1.385486 ms (FindLiveObjects: 0.022806 ms CreateObjectMapping: 0.018245 ms MarkObjects: 0.618052 ms  DeleteObjects: 0.725812 ms)
+Total: 1.417986 ms (FindLiveObjects: 0.021666 ms CreateObjectMapping: 0.016534 ms MarkObjects: 0.636297 ms  DeleteObjects: 0.742917 ms)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1dec -> priority: 1 
+  Thread -> id: 2510 -> priority: 1 

@@ -209,7 +209,7 @@ namespace MapLoader
             }
             else if (Pixels2D != null)
             {
-                string filePath = "../../../../Data/map.txt";
+                string filePath = "map.txt";
                 System.IO.StreamWriter file = new System.IO.StreamWriter(filePath);
 
                 //file.WriteLine(Pixels2D.GetLength(0));    // MapWidth
