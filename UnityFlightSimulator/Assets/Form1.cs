@@ -135,7 +135,8 @@ namespace MapLoader
         {
             InitializeComponent();
 
-            setButtons(true, false, false, false);
+            //setButtons(true, false, false, false);
+			setButtons(true, false, false);
         }
 
         private void buttonSelect_Click(object sender, EventArgs e)
@@ -146,7 +147,8 @@ namespace MapLoader
 
                 if (fileName.Contains(".raw") || fileName.Contains(".RAW"))
                 {
-                    setButtons(false, true, true, true);
+                    //setButtons(false, true, true, true);
+					setButtons(false, true, true);
 
                     byte[] buffer = System.IO.File.ReadAllBytes(openFileDialog1.FileName);
 
@@ -166,7 +168,8 @@ namespace MapLoader
                          fileName.Contains(".JPG") || fileName.Contains(".JPEG") || fileName.Contains(".BMP") ||
                          fileName.Contains(".GIF") || fileName.Contains(".PNG") || fileName.Contains(".TIFF"))
                 {
-                    setButtons(false, true, true, true);
+                    //setButtons(false, true, true, true);
+					setButtons(false, true, true);
 
                     Bitmap bitmap = (Bitmap)Image.FromFile(openFileDialog1.FileName);
                     
@@ -197,8 +200,8 @@ namespace MapLoader
         {
             if (Pixels != null)
             {
-                string filePath = "../../../../Data/map.txt";
-                System.IO.StreamWriter file = new System.IO.StreamWriter(filePath);
+                string fileName = "height_values.txt";
+                System.IO.StreamWriter file = new System.IO.StreamWriter(fileName);
 
                 for (int i = 0; i < Pixels.Length; i++)
                     file.WriteLine(Pixels[i]);
@@ -209,11 +212,8 @@ namespace MapLoader
             }
             else if (Pixels2D != null)
             {
-                string filePath = "map.txt";
-                System.IO.StreamWriter file = new System.IO.StreamWriter(filePath);
-
-                //file.WriteLine(Pixels2D.GetLength(0));    // MapWidth
-                //file.WriteLine(Pixels2D.GetLength(1));    // MapHeight
+                string fileName = "height_values.txt";
+                System.IO.StreamWriter file = new System.IO.StreamWriter(fileName);
 
                 for (int j = 0; j < Pixels2D.GetLength(1); j++)     // MapHeight
                     for (int i = 0; i < Pixels2D.GetLength(0); i++) // MapWidth
@@ -232,10 +232,12 @@ namespace MapLoader
             Pixels = null;
             Pixels2D = null;
 
-            setButtons(true, false, false, false);
+            //setButtons(true, false, false, false);
+			setButtons(true, false, false);
         }
 
-        private void setButtons(bool bSelect, bool bUnload, bool bSave, bool bStart)
+        //private void setButtons(bool bSelect, bool bUnload, bool bSave, bool bStart)
+		private void setButtons(bool bSelect, bool bUnload, bool bSave, bool bStart = true)
         {
             buttonSelect.Enabled = bSelect;
             buttonUnload.Enabled = bUnload;

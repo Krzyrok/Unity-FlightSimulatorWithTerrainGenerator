@@ -83,7 +83,7 @@ namespace MapLoader
         {
             if (Pixels != null)
             {
-                string filePath = "../../../../Data/map.txt";
+                string filePath = "../../../../Data/height_values.txt";
                 System.IO.StreamWriter file = new System.IO.StreamWriter(filePath);
 
                 for (int i = 0; i < Pixels.Length; i++)
@@ -95,11 +95,8 @@ namespace MapLoader
             }
             else if (Pixels2D != null)
             {
-                string filePath = "../../../../Data/map.txt";
+                string filePath = "../../../../Data/height_values.txt";
                 System.IO.StreamWriter file = new System.IO.StreamWriter(filePath);
-
-                //file.WriteLine(Pixels2D.GetLength(0));    // MapWidth
-                //file.WriteLine(Pixels2D.GetLength(1));    // MapHeight
 
                 for (int j = 0; j < Pixels2D.GetLength(1); j++)     // MapHeight
                     for (int i = 0; i < Pixels2D.GetLength(0); i++) // MapWidth
