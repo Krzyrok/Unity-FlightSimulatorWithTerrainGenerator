@@ -31,9 +31,10 @@
             this.Output = new System.Windows.Forms.RichTextBox();
             this.buttonSelect = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.buttonUnload = new System.Windows.Forms.Button();
             this.buttonStart = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.SuspendLayout();
             // 
             // Output
@@ -66,7 +67,7 @@
             // 
             // openFileDialog1
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            //this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // buttonUnload
             // 
@@ -109,9 +110,10 @@
         private System.Windows.Forms.RichTextBox Output;
         private System.Windows.Forms.Button buttonSelect;
         private System.Windows.Forms.Button buttonSave;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button buttonUnload;
         private System.Windows.Forms.Button buttonStart;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 

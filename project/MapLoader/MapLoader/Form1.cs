@@ -83,28 +83,36 @@ namespace MapLoader
         {
             if (Pixels != null)
             {
-                string filePath = "../../../../Data/height_values.txt";
-                System.IO.StreamWriter file = new System.IO.StreamWriter(filePath);
+                saveFileDialog1.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
 
-                for (int i = 0; i < Pixels.Length; i++)
-                    file.WriteLine(Pixels[i]);
+                if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    System.IO.StreamWriter file = new System.IO.StreamWriter(saveFileDialog1.FileName);
 
-                file.Close();
+                    for (int i = 0; i < Pixels.Length; i++)
+                        file.WriteLine(Pixels[i]);
 
-                Output.Text += "Data successfully saved into file map.txt.\n";
+                    file.Close();
+
+                    Output.Text += "Data successfully saved into file.\n";
+                }
             }
             else if (Pixels2D != null)
             {
-                string filePath = "../../../../Data/height_values.txt";
-                System.IO.StreamWriter file = new System.IO.StreamWriter(filePath);
+                saveFileDialog1.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
 
-                for (int j = 0; j < Pixels2D.GetLength(1); j++)     // MapHeight
-                    for (int i = 0; i < Pixels2D.GetLength(0); i++) // MapWidth
-                        file.WriteLine(Pixels2D[i,j]);
+                if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    System.IO.StreamWriter file = new System.IO.StreamWriter(saveFileDialog1.FileName);
 
-                file.Close();
+                    for (int j = 0; j < Pixels2D.GetLength(1); j++)     // MapHeight
+                        for (int i = 0; i < Pixels2D.GetLength(0); i++) // MapWidth
+                            file.WriteLine(Pixels2D[i, j]);
 
-                Output.Text += "Data successfully saved into file map.txt.\n";
+                    file.Close();
+
+                    Output.Text += "Data successfully saved into file.\n";
+                }
             }
             else
                 Output.Text += "There is no data to save.\n";
