@@ -46,9 +46,14 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Airplane\AirplaneMovement.cs" />
-     <Compile Include="Assets\Camera\CameraSwitcher.cs" />
      <Compile Include="Assets\Form1.cs" />
+     <Compile Include="Assets\Scripts\Airplane\AirplaneMovement.cs" />
+     <Compile Include="Assets\Scripts\Camera\CameraSwitcher.cs" />
+     <Compile Include="Assets\Scripts\CollsionDetector.cs" />
+     <Compile Include="Assets\Scripts\Constants.cs" />
+     <Compile Include="Assets\Scripts\GameControllers\GameController.cs" />
+     <Compile Include="Assets\Scripts\Texts\GameOverTextController.cs" />
+     <Compile Include="Assets\Scripts\Texts\ScoreTextController.cs" />
      <Compile Include="Assets\StartMenu.cs" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />

@@ -2,9 +2,10 @@
 using System.Collections;
 
 public class CameraSwitcher : MonoBehaviour {
-	Camera RearCamera;
-	Camera FirstPerspectiveCamera;
-	Camera UpCamera;
+	public Camera RearCamera;
+	public Camera FirstPerspectiveCamera;
+	public Camera UpCamera;
+	public Camera LeftSideCamera;
 
 	void Start () {
 	
@@ -26,6 +27,11 @@ public class CameraSwitcher : MonoBehaviour {
 			DisableAllCameras();
 			UpCamera.enabled = true;
 		}
+		else if (Input.GetKeyDown(KeyCode.F4))
+		{
+			DisableAllCameras();
+			LeftSideCamera.enabled = true;
+		}
 	}
 	
 	private void DisableAllCameras()
@@ -33,5 +39,6 @@ public class CameraSwitcher : MonoBehaviour {
 		RearCamera.enabled = false;
 		FirstPerspectiveCamera.enabled = false;
 		UpCamera.enabled = false;
+		LeftSideCamera.enabled = false;
 	}
 }
