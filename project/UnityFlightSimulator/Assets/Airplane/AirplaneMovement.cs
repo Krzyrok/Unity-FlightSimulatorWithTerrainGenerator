@@ -27,6 +27,6 @@ public class AirplaneMovement : MonoBehaviour {
 		float translationVertical = Input.GetAxis("Vertical") * AirplaneSteeringSpeed;
 		translationVertical *= Time.deltaTime;
 
-		transform.Translate(translationHorizontal, translationVertical, 0);
+		transform.Rotate(translationVertical, translationHorizontal, 0);
 	}
 }
