@@ -4,23 +4,21 @@ using System.Collections;
 public class AirplaneMovement : MonoBehaviour {
 	public float AirplaneForwardSpeed = 20.0f;
 	public float AirplaneSteeringSpeed = 15.0f;
-
-	void Start () {
-	
+	public AudioSource EngineSound;
+	void Start () 
+	{ 
+		EngineSound.loop = true;
+		EngineSound.Play();
 	}
 	
 	// Chnage on the FixedUpdate if will be used RgidBody
 	void Update () {
-		MoveForward ();
-		MoveInDirectionWantedByPlayer ();
+		Rotate ();
+		SetSpeed ();
+		Move ();
 	}
 
-	void MoveForward() {
-		float movementSpeed = Time.deltaTime * AirplaneForwardSpeed;
-		transform.Translate(Vector3.up * movementSpeed);
-	}
-
-	void MoveInDirectionWantedByPlayer() {
+	void Rotate() {
 		float translationHorizontal = Input.GetAxis("Horizontal") * (-1) * AirplaneSteeringSpeed;
 		translationHorizontal *= Time.deltaTime;
 
@@ -28,5 +26,29 @@ public class AirplaneMovement : MonoBehaviour {
 		translationVertical *= Time.deltaTime;
 
 		transform.Rotate(translationVertical, translationHorizontal, 0);
+	}
+
+	void SetSpeed()
+	{
+		if (Input.GetKey (KeyCode.LeftControl)) {
+			AirplaneForwardSpeed += 5 * Time.deltaTime;
+		} else if (Input.GetKey(KeyCode.LeftAlt)){
+			AirplaneForwardSpeed -= 5 * Time.deltaTime;
+		}
+		if (AirplaneForwardSpeed > 40) {
+			AirplaneForwardSpeed = 40;
+		} else if (AirplaneForwardSpeed < 8){
+			AirplaneForwardSpeed = 8;
+		}
+	}
+
+	void Move() {
+		float movementSpeed = Time.deltaTime * AirplaneForwardSpeed;
+		if (AirplaneForwardSpeed > 8) {
+			transform.Translate (Vector3.up * movementSpeed);
+		} else {
+			transform.Translate (Vector3.down * movementSpeed,Space.World);
+			transform.Translate (Vector3.up * movementSpeed*0.6f);
+		}
 	}
 }
