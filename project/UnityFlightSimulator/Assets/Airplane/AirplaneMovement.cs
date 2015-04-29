@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class AirplaneMovement : MonoBehaviour {
-	public float AirplaneForwardSpeed;
-	public float AirplaneSteeringSpeed;
+	public float AirplaneForwardSpeed = 20.0f;
+	public float AirplaneSteeringSpeed = 15.0f;
 
 	void Start () {
 	
@@ -21,10 +21,10 @@ public class AirplaneMovement : MonoBehaviour {
 	}
 
 	void MoveInDirectionWantedByPlayer() {
-		float translationHorizontal = Input.GetAxis("Horizontal")*(-1) * AirplaneSteeringSpeed;
+		float translationHorizontal = Input.GetAxis("Horizontal") * (-1) * AirplaneSteeringSpeed;
 		translationHorizontal *= Time.deltaTime;
 
-		float translationVertical = Input.GetAxis("Vertical") * AirplaneSteeringSpeed;
+		float translationVertical = Input.GetAxis("Vertical") * (-1) * AirplaneSteeringSpeed;
 		translationVertical *= Time.deltaTime;
 
 		transform.Rotate(translationVertical, translationHorizontal, 0);
