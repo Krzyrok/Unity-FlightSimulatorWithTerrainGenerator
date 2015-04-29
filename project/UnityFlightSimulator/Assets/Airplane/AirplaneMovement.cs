@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class AirplaneMovement : MonoBehaviour {
-
 	public float AirplaneForwardSpeed;
 	public float AirplaneSteeringSpeed;
 
@@ -21,7 +20,7 @@ public class AirplaneMovement : MonoBehaviour {
 		transform.Translate(Vector3.forward * movementSpeed);
 	}
 
-	void MoveInDirectionWantedByPlayer(float movementSpeed) {
+	void MoveInDirectionWantedByPlayer() {
 		float translationHorizontal = Input.GetAxis("Horizontal") * AirplaneSteeringSpeed;
 		translationHorizontal *= Time.deltaTime;
 
