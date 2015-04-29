@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\CollsionDetector.cs" />
      <Compile Include="Assets\Scripts\Constants.cs" />
      <Compile Include="Assets\Scripts\GameControllers\GameController.cs" />
+     <Compile Include="Assets\Scripts\Texts\GameOverTextController.cs" />
      <Compile Include="Assets\StartMenu.cs" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />

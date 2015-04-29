@@ -15,6 +15,7 @@ public class CollsionDetector : MonoBehaviour {
 		if (collisionObject.gameObject.name == Constants.AirplaneObjectName) {
 			Destroy(collisionObject.gameObject);
 			GameController.EndGame();
+			GameOverTextController.ShowGameOverText();
 		}
 	}
 }
