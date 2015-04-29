@@ -17,7 +17,7 @@ public class AirplaneMovement : MonoBehaviour {
 
 	void MoveForward() {
 		float movementSpeed = Time.deltaTime * AirplaneForwardSpeed;
-		transform.Translate(Vector3.forward * movementSpeed);
+		transform.Translate(Vector3.up * movementSpeed);
 	}
 
 	void MoveInDirectionWantedByPlayer() {

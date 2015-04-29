@@ -204,8 +204,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a7a4bd2afad9194fa2dc2e1d4bc9c4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AirplaneForwardSpeed: 2
-  AirplaneSteeringSpeed: 0
+  AirplaneForwardSpeed: 20
+  AirplaneSteeringSpeed: 15
 --- !u!4 &941185251 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: fad3e329520dc4b29854e8aeab27e6f8, type: 3}
