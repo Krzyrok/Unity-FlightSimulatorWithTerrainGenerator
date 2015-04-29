@@ -421,6 +421,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AirplaneForwardSpeed: 20
   AirplaneSteeringSpeed: 15
+--- !u!64 &941185248
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 941185246}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: fad3e329520dc4b29854e8aeab27e6f8, type: 3}
 --- !u!4 &941185251 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: fad3e329520dc4b29854e8aeab27e6f8, type: 3}
