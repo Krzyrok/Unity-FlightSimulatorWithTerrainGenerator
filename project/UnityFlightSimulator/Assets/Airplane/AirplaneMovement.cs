@@ -21,7 +21,7 @@ public class AirplaneMovement : MonoBehaviour {
 	}
 
 	void MoveInDirectionWantedByPlayer() {
-		float translationHorizontal = Input.GetAxis("Horizontal") * AirplaneSteeringSpeed;
+		float translationHorizontal = Input.GetAxis("Horizontal")*(-1) * AirplaneSteeringSpeed;
 		translationHorizontal *= Time.deltaTime;
 
 		float translationVertical = Input.GetAxis("Vertical") * AirplaneSteeringSpeed;
