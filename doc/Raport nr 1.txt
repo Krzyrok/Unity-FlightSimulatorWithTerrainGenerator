@@ -2,7 +2,8 @@
 MO3D - Projekt
 „Symulator wyœcigów powietrznych w dowolnej scenerii wygenerowanej z mapy wysokoœciowej terenu.”
 
-Postêp prac.
+	Postêp prac:
+
 Krzysztof Stachyra:
 1) HUD: wyœwietlanie informacji o koñcu gry (GameOverText) oraz o aktualnej liczbie punktów (ScoreText). Skrypty aktualizauj¹ce pola tekstowe (GameOverTextController oraz ScoreTextController). 
 2) Skrypt GameController: w momencie koñca gry i wciœniêcia klwisza 'R' restart gry (mapy); obs³uga koñca gry (zatrzymanie)
@@ -18,3 +19,15 @@ Mateusz Smoll:
 3) Poprawki w skrypcie poruszania samolotu.
 4) Dodanie opcji zmiany prêdkoœci samolotu za pomoc¹ przycisków LCTRL oraz LALT.
 5) Dodanie dŸwiêku silników samolotu podczas lotu. 
+
+Piotr Dudek:
+1) Implementacja w C# w Visual Studio menu startowego z mo¿liwoœci¹ wyboru z dysku pliku z map¹ wysokoœciow¹ terenu
+2) Implementacja odczytu danych wysokoœciowych (poziomów szaroœci poszczególnych pikseli) z wybranego pliku z obrazem mapy wysokoœciowej (dostêpne formaty: *raw, *.jpg, *.jpeg, *.bmp, *.png, *.tiff, *.gif).
+3) Implementacja zabezpieczeñ przed wprowadzeniem niepoprawnych danych wejœciowych (wybór b³êdnego formatu pliku, b³êdny rozmiar pliku w formacie *.raw).
+4) Scanelnie utworzonego menu startowego z pojektem Unity (skrypty StartMenu.cs i Form1.cs).
+5) Dodanie generacji p³askiego terenu z poziomu kodu (skrypt MyTerrain.cs).
+6) Dodanie tekstury do generowanego terenu.
+7) Dodanie dynamicznego ustawienia rozmiarów terenu na podstawie danych
+   odczytanych z mapy wysokoœciowej.
+8) Dodanie ustawiania wysokoœci poszczególnych punktów terenu na podstawie odczytanych z mapy
+   poziomów szaroœci (na razie szwankuje).
