@@ -10,7 +10,7 @@ public class ScoreTextController : MonoBehaviour {
 	void Start () {
 		score = 0;
 		scoreText = GetComponent<Text>();
-		scoreText.text = "Your score: " + score;
+		UpdateScoreText ();
 	}
 
 	public static void AddScore(int points) {
