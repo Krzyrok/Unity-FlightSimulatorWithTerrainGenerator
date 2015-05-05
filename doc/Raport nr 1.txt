@@ -11,3 +11,10 @@ Krzysztof Stachyra:
 5) Kamery pod¹¿aj¹ce za modelem samolotu (z ty³u, z góry, z perspektywy pierwszej osoby, z lewej strony samolotu); skrypt prze³¹czaj¹cy widoki kamery: CameraSwitcher
 6) Skrypt CollsionDetector (na³o¿ony na terrain): wykrywanie kolizji samolotu z terenem lub drzewami. W momencie kolizji zatrzymanie gry.
 7) Skrypt AirplaneMovement: obracanie samolotu (metoda Rotate) oraz poruszanie (metoda Move). Poruszanie zrealizowane wstêpnie jako przesuniêcie (w momencie wciœniêcia klawiszy strza³ek)
+
+Mateusz Smoll:
+1) Za³adowanie modelu samolotu i podpiêcie pod skrypt AirplaneMovement.
+2) Dodanie trzeciosobowej kamery i niektórych ustawieñ kamer
+3) Poprawki w skrypcie poruszania samolotu.
+4) Dodanie opcji zmiany prêdkoœci samolotu za pomoc¹ przycisków LCTRL oraz LALT.
+5) Dodanie dŸwiêku silników samolotu podczas lotu. 
