@@ -1,0 +1,13 @@
+30.04.2015
+MO3D - Projekt
+„Symulator wyœcigów powietrznych w dowolnej scenerii wygenerowanej z mapy wysokoœciowej terenu.”
+
+Postêp prac.
+Krzysztof Stachyra:
+1) HUD: wyœwietlanie informacji o koñcu gry (GameOverText) oraz o aktualnej liczbie punktów (ScoreText). Skrypty aktualizauj¹ce pola tekstowe (GameOverTextController oraz ScoreTextController). 
+2) Skrypt GameController: w momencie koñca gry i wciœniêcia klwisza 'R' restart gry (mapy); obs³uga koñca gry (zatrzymanie)
+3) Skrypt z klas¹ zawieraj¹c¹ wszystkie sta³e w programie (takie jak nazwa samolotu): Constants
+4) Skrypt obs³uguj¹cy kolizje 
+5) Kamery pod¹¿aj¹ce za modelem samolotu (z ty³u, z góry, z perspektywy pierwszej osoby, z lewej strony samolotu); skrypt prze³¹czaj¹cy widoki kamery: CameraSwitcher
+6) Skrypt CollsionDetector (na³o¿ony na terrain): wykrywanie kolizji samolotu z terenem lub drzewami. W momencie kolizji zatrzymanie gry.
+7) Skrypt AirplaneMovement: obracanie samolotu (metoda Rotate) oraz poruszanie (metoda Move). Poruszanie zrealizowane wstêpnie jako przesuniêcie (w momencie wciœniêcia klawiszy strza³ek)
