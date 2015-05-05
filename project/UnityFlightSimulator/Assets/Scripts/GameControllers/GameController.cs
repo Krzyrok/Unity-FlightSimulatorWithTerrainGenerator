@@ -10,7 +10,7 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.R) && isGameOver)
+		if (isGameOver && Input.GetKeyDown(KeyCode.R))
 		{
 			isGameOver = false;
 			Time.timeScale = 1.0f;
