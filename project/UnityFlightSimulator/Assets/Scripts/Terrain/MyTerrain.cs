@@ -6,6 +6,7 @@ public class MyTerrain : MonoBehaviour
 {
     public float m_terrainSizeMultiplier = 10;      // terrain size = heightmap size * multiplier
     public float m_terrainHeightMultiplier = 0.2f;  // terrain height = terrain size * multiplier
+    public bool m_makeSeaLevel = true;
     public float m_seaLevelMultiplier = 0.05f;      // sea level = terrain height * multiplier
     public float m_cliffLevelMultiplier = 0.4f;     // cliff level = terrain height * multiplier
     public float m_baseMapDistance = 1000.0f;       // distance at which the low res base map will be drawn (decrease to increase performance)
@@ -60,9 +61,15 @@ public class MyTerrain : MonoBehaviour
         // terrain heights
 
         m_terrainHeights = StartMenu.m_grayLevels;
-        
-        m_seaLevel = m_terrainHeight * m_seaLevelMultiplier;
-        this.makeWater();
+
+        if (m_makeSeaLevel == true)
+        {
+            m_seaLevel = m_terrainHeight * m_seaLevelMultiplier;
+            this.makeWater();
+        }
+        else
+            m_seaLevel = -1;
+
 
         m_terrainData.SetHeights(0, 0, m_terrainHeights);
 
@@ -191,7 +198,7 @@ public class MyTerrain : MonoBehaviour
                     map[z, x, 1] = 0.0f;
                     map[z, x, 2] = 0.0f;
                 }
-                else if (currentHeight > m_seaLevel*1.5f && currentHeight < m_cliffLevel*0.5f)     // grass
+                else if (currentHeight >= m_seaLevel*1.1f && currentHeight < m_cliffLevel*0.5f)     // grass
                 {
                     map[z, x, 0] = 0.0f;
                     map[z, x, 1] = 1.0f;
@@ -264,7 +271,7 @@ public class MyTerrain : MonoBehaviour
                     float noise = treeNoise.FractalNoise2D(worldPosX, worldPosZ, 3, treeFrq, 1.0f);
                     float ht = terrain.terrainData.GetInterpolatedHeight(normX, normZ);
 
-                    if (noise > 0.0f && ht > m_seaLevel && ht < m_cliffLevel)
+                    if (noise > 0.0f && ht > m_seaLevel*1.1f && ht < m_cliffLevel)
                     {
 
                         TreeInstance temp = new TreeInstance();
