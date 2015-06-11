@@ -47,10 +47,12 @@ public class MyTerrain : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+		ActiveGate = (GameObject)Resources.Load ("ActiveGate");
 		Gates = new Vector3[NumberOfGates];
+		AllGates = new ArrayList ();
+		
         m_terrainObject = new Terrain();
         m_terrainData = new TerrainData();
-
 
         //----------------------------------------------------------------------------------------------
         #region setting up terrain data
