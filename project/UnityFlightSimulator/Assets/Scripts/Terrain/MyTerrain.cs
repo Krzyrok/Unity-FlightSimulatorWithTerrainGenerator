@@ -90,14 +90,24 @@ public class MyTerrain : MonoBehaviour
 
 
         m_terrainObject = Terrain.CreateTerrainGameObject(m_terrainData).GetComponent<Terrain>();
-
-        m_terrainObject.heightmapPixelError = m_pixelMapError;
+        
+		m_terrainObject.heightmapPixelError = m_pixelMapError;
         m_terrainObject.basemapDistance = m_baseMapDistance;
 
 
         this.fillTreeInstances(m_terrainObject, 0, 0);
         this.fillDetailMap(m_terrainObject, 0, 0);
+
+		GenerateGates ();
     }
+
+	private void GenerateGates ()
+	{
+		var size = m_terrainData.size.x;
+		var heightsTmp = m_terrainData.GetHeights(0,0, 256, 256);
+		//var heights = Terrain.activeTerrain.terrainData.GetHeights(0,0, size, size);
+		//StartMenu.m_grayLevels;
+	}
 
     // Update is called once per frame
     void Update() { }
