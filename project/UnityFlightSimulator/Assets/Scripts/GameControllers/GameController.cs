@@ -15,10 +15,17 @@ public class GameController : MonoBehaviour {
 			Time.timeScale = 1.0f;
 			Application.LoadLevel(Application.loadedLevel);
 		}
+
+		UpdateDisplayedTime ();
 	}
 
 	public static void EndGame() {
 		isGameOver = true;
 		Time.timeScale = 0.0f;
+	}
+
+	private void UpdateDisplayedTime()
+	{
+		TimeTextController.UpdateTimeText (Time.time.ToString());
 	}
 }

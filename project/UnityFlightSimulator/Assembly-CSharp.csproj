@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\Terrain\PerlinNoise.cs" />
      <Compile Include="Assets\Scripts\Texts\GameOverTextController.cs" />
      <Compile Include="Assets\Scripts\Texts\ScoreTextController.cs" />
+     <Compile Include="Assets\Scripts\Texts\TimeTextController.cs" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\Resources\results\map_raw.txt" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
