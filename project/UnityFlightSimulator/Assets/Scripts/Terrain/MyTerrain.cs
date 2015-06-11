@@ -4,6 +4,9 @@ using System.Collections;
 
 public class MyTerrain : MonoBehaviour
 {
+	public GameObject ActiveGate;
+	public GameObject InactiveGate;
+
     public float m_terrainSizeMultiplier = 10;      // terrain size = heightmap size * multiplier
     public float m_terrainHeightMultiplier = 0.2f;  // terrain height = terrain size * multiplier
     public bool m_makeSeaLevel = true;
@@ -35,10 +38,13 @@ public class MyTerrain : MonoBehaviour
     Terrain m_terrainObject;
     TerrainData m_terrainData;
 
-
+	public uint NumberOfGates = 40;
+	int currentGateIndex;
+	Vector3[] Gates;
     // Use this for initialization
     void Start()
     {
+		Gates = new Vector3[NumberOfGates];
         m_terrainObject = new Terrain();
         m_terrainData = new TerrainData();
 
@@ -105,8 +111,32 @@ public class MyTerrain : MonoBehaviour
 	{
 		var size = m_terrainData.size.x;
 		var heightsTmp = m_terrainData.GetHeights(0,0, 256, 256);
-		//var heights = Terrain.activeTerrain.terrainData.GetHeights(0,0, size, size);
-		//StartMenu.m_grayLevels;
+		for (int i = 0; i < NumberOfGates; i++)
+		{
+			Gates[i] = GetGatePosition();
+		}
+
+		Instantiate (ActiveGate, Gates[0], Quaternion.identity);
+		for (int i = 1; i < NumberOfGates; i++)
+		{
+			Instantiate (InactiveGate, Gates[i], Quaternion.identity);
+		}
+	}
+	float xL = 285.9f, xP = 2183.4f; 
+	float zD = 302.1f, zG = 2076.4f;
+	float distanceBetweenTerrainAndGate = 100.0f;
+	private Vector3 GetGatePosition()
+	{
+		Vector3 result = new Vector3 ();
+		result.x = Random.Range (xL, xP);
+		result.z = Random.Range (zD, zG);
+		result.y = m_terrainObject.SampleHeight (result);
+		return result;
+	}
+
+	public static void UserCrossedTheGate()
+	{
+		//currentGateIndex;
 	}
 
     // Update is called once per frame
