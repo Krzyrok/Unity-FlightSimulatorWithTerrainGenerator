@@ -4,8 +4,10 @@ using System.Collections;
 
 public class MyTerrain : MonoBehaviour
 {
-	public GameObject ActiveGate;
+	public static GameObject ActiveGate;
 	public GameObject InactiveGate;
+	public static float DistanceBetweenTerrainAndGate = 100.0f;
+	
 
     public float m_terrainSizeMultiplier = 10;      // terrain size = heightmap size * multiplier
     public float m_terrainHeightMultiplier = 0.2f;  // terrain height = terrain size * multiplier
@@ -39,8 +41,9 @@ public class MyTerrain : MonoBehaviour
     TerrainData m_terrainData;
 
 	public uint NumberOfGates = 40;
-	int currentGateIndex;
-	Vector3[] Gates;
+	static int currentGateIndex;
+	static Vector3[] Gates;
+	static ArrayList AllGates;
     // Use this for initialization
     void Start()
     {
@@ -116,27 +119,37 @@ public class MyTerrain : MonoBehaviour
 			Gates[i] = GetGatePosition();
 		}
 
-		Instantiate (ActiveGate, Gates[0], Quaternion.identity);
+		var newGate = Instantiate (ActiveGate, Gates[0], Quaternion.identity);
+		AllGates.Add (newGate);
 		for (int i = 1; i < NumberOfGates; i++)
 		{
-			Instantiate (InactiveGate, Gates[i], Quaternion.identity);
+			newGate = Instantiate (InactiveGate, Gates[i], Quaternion.identity);
+			AllGates.Add (newGate);
 		}
+
+		currentGateIndex = 0;
 	}
 	float xL = 285.9f, xP = 2183.4f; 
 	float zD = 302.1f, zG = 2076.4f;
-	float distanceBetweenTerrainAndGate = 100.0f;
 	private Vector3 GetGatePosition()
 	{
 		Vector3 result = new Vector3 ();
 		result.x = Random.Range (xL, xP);
 		result.z = Random.Range (zD, zG);
-		result.y = m_terrainObject.SampleHeight (result);
+		result.y = m_terrainObject.SampleHeight (result) + DistanceBetweenTerrainAndGate;
 		return result;
 	}
 
 	public static void UserCrossedTheGate()
 	{
-		//currentGateIndex;
+		var gateToDestroy = (GameObject)AllGates[currentGateIndex];
+		Destroy (gateToDestroy);
+		currentGateIndex++;
+		gateToDestroy = (GameObject)AllGates[currentGateIndex];
+		Destroy (gateToDestroy);
+
+		var newGate = Instantiate (ActiveGate, Gates[currentGateIndex], Quaternion.identity);
+		AllGates [currentGateIndex] = newGate;
 	}
 
     // Update is called once per frame
