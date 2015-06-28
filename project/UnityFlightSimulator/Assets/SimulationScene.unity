@@ -272,6 +272,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe66d1b269091b649b5e2927ea152239, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &454869649
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 454869650}
+  - 114: {fileID: 454869651}
+  m_Layer: 0
+  m_Name: GatesController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &454869650
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 454869649}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 308.4375, y: 27.46875, z: 17.875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 746902743}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+--- !u!114 &454869651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 454869649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f733933c8749a364f9605a09bd0f3ef7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActiveGate: {fileID: 139960, guid: ed6d337d1db05a54c86b73df84be1492, type: 2}
+  InactiveGate: {fileID: 126946, guid: cdf0da82d6e1f2f48bb436e349206632, type: 2}
+  GatesPositionsFactory: {fileID: 746902742}
 --- !u!1 &517965308
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,6 +636,47 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &746902741
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 746902743}
+  - 114: {fileID: 746902742}
+  m_Layer: 0
+  m_Name: GatesPositionsFactory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &746902742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 746902741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfd69b47723b3d44a802e1311fb251a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumberOfGates: 40
+  DistanceBetweenTerrainAndGate: 100
+--- !u!4 &746902743
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 746902741}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 454869650}
+  m_RootOrder: 0
 --- !u!1 &773519875
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,8 +1132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b4dad37bc2a4fb40ae267c46c7c09d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActiveGate: {fileID: 139960, guid: ed6d337d1db05a54c86b73df84be1492, type: 2}
-  InactiveGate: {fileID: 126946, guid: cdf0da82d6e1f2f48bb436e349206632, type: 2}
+  GatesController: {fileID: 454869651}
   m_terrainSizeMultiplier: 10
   m_terrainHeightMultiplier: .200000003
   m_makeSeaLevel: 1
