@@ -5,6 +5,7 @@ public class AirplaneMovement : MonoBehaviour {
 	public float AirplaneForwardSpeed = 20.0f;
 	public float AirplaneSteeringSpeed = 15.0f;
 	public AudioSource EngineSound;
+
 	void Start () 
 	{ 
 		EngineSound.loop = true;
@@ -44,11 +45,6 @@ public class AirplaneMovement : MonoBehaviour {
 
 	void Move() {
 		float movementSpeed = Time.deltaTime * AirplaneForwardSpeed;
-		if (AirplaneForwardSpeed > 8) {
-			transform.Translate (Vector3.up * movementSpeed);
-		} else {
-			transform.Translate (Vector3.down * movementSpeed,Space.World);
-			transform.Translate (Vector3.up * movementSpeed*0.6f);
-		}
+		transform.Translate (Vector3.up * movementSpeed);
 	}
 }
