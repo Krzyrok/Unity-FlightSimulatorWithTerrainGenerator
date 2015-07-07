@@ -485,7 +485,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
-  m_StereoMirrorMode: 0
 --- !u!81 &538966024
 AudioListener:
   m_ObjectHideFlags: 0
@@ -634,7 +633,6 @@ MonoBehaviour:
   m_SubmitButton: Submit
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
-  m_RepeatDelay: .5
   m_AllowActivationOnMobileDevice: 0
 --- !u!114 &645980987
 MonoBehaviour:
@@ -912,7 +910,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
-  m_StereoMirrorMode: 0
 --- !u!4 &934462954
 Transform:
   m_ObjectHideFlags: 0
@@ -1238,7 +1235,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
-  m_StereoMirrorMode: 0
 --- !u!1 &1862183407
 GameObject:
   m_ObjectHideFlags: 0
@@ -1327,7 +1323,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
-  m_StereoMirrorMode: 0
 --- !u!82 &1988911093
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1434,8 +1429,8 @@ Transform:
   m_PrefabParentObject: {fileID: 468584, guid: c0ac0474b5c90a1419d4417431276924, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1988911095}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1959.00842, y: 225.341141, z: 823.478088}
+  m_LocalRotation: {x: -.653862059, y: .300129563, z: .316256672, w: .618359506}
+  m_LocalPosition: {x: 1959.09998, y: 225.300003, z: 823.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 993365854}
