@@ -1147,13 +1147,6 @@ MonoBehaviour:
   m_detailObjectDistance: 400
   m_detailObjectDensity: 4
   m_detailMode: 0
-  m_heightmapSize: 0
-  m_terrainSize: 0
-  m_terrainHeight: 0
-  m_seaLevel: 0
-  m_cliffLevel: 0
-  m_terrainObject: {fileID: 0}
-  m_terrainData: {fileID: 0}
 --- !u!4 &1257344021
 Transform:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 
-public class MyTerrain : MonoBehaviour
+public class TerrainGenerator : MonoBehaviour
 {
 	public GatesController GatesController;
 
