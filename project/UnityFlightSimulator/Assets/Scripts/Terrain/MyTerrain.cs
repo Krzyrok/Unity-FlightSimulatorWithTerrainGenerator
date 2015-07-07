@@ -99,7 +99,7 @@ public class MyTerrain : MonoBehaviour
         this.fillTreeInstances(m_terrainObject, 0, 0);
         this.fillDetailMap(m_terrainObject, 0, 0);
 
-		UnityEngineInternal.APIUpdaterRuntimeServices.AddComponent (m_terrainObject.gameObject, "Assets/Scripts/Terrain/MyTerrain.cs (102,3)", Constants.CollisionDetectorScriptName);
+		m_terrainObject.gameObject.AddComponent<CollisionDetector>();
 
 		GatesController.GenerateGates (m_terrainObject, m_terrainData);
     }
