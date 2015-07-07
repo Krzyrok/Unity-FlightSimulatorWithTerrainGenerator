@@ -17,9 +17,9 @@ public class GatesController : MonoBehaviour {
 
 		var newGate = Instantiate (ActiveGate, _gateLocations[0], Quaternion.identity);
 		_gates.Add (newGate);
-		foreach(var gateLocation in _gateLocations)
+		for(int gateIndex = 1; gateIndex < _gateLocations.Length; gateIndex++)
 		{
-			newGate = Instantiate (InactiveGate, gateLocation, Quaternion.identity);
+			newGate = Instantiate (InactiveGate, _gateLocations[gateIndex], Quaternion.identity);
 			_gates.Add (newGate);
 		}
 		
