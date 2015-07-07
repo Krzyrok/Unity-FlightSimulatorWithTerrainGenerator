@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 412434}
   - 33: {fileID: 3346744}
   - 23: {fileID: 2307062}
-  - 114: {fileID: 11433212}
   m_Layer: 0
   m_Name: ActiveGate
   m_TagString: Untagged
@@ -29,6 +28,7 @@ GameObject:
   - 33: {fileID: 3344078}
   - 135: {fileID: 13581064}
   - 64: {fileID: 6496880}
+  - 114: {fileID: 11401602}
   m_Layer: 0
   m_Name: ColliderObject
   m_TagString: Untagged
@@ -111,12 +111,12 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &11433212
+--- !u!114 &11401602
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 108258}
+  m_GameObject: {fileID: 134018}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63f63533e1a5ea948be71ec0b927ea31, type: 3}
