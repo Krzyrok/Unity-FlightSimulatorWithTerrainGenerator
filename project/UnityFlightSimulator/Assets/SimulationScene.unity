@@ -1108,7 +1108,7 @@ GameObject:
   - 154: {fileID: 1257344023}
   - 114: {fileID: 1257344022}
   m_Layer: 0
-  m_Name: MyTerrain
+  m_Name: TerrainGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1147,6 +1147,13 @@ MonoBehaviour:
   m_detailObjectDistance: 400
   m_detailObjectDensity: 4
   m_detailMode: 0
+  m_heightmapSize: 0
+  m_terrainSize: 0
+  m_terrainHeight: 0
+  m_seaLevel: 0
+  m_cliffLevel: 0
+  m_terrainObject: {fileID: 0}
+  m_terrainData: {fileID: 0}
 --- !u!4 &1257344021
 Transform:
   m_ObjectHideFlags: 0
@@ -1435,6 +1442,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1988911097}
   - 114: {fileID: 1988911096}
+  - 114: {fileID: 1988911098}
   m_Layer: 0
   m_Name: Airplane
   m_TagString: Untagged
@@ -1471,6 +1479,18 @@ Transform:
   - {fileID: 244871749}
   m_Father: {fileID: 0}
   m_RootOrder: 7
+--- !u!114 &1988911098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1988911095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96c8610238a712648a9f427f74ff608e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartHeightDistanceBetweenTerrainAdnAirplane: 500
 --- !u!1 &1992571333
 GameObject:
   m_ObjectHideFlags: 0
