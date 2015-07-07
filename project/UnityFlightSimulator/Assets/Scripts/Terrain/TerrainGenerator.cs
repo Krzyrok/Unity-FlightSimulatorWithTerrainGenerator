@@ -5,6 +5,7 @@ using System.Collections;
 public class TerrainGenerator : MonoBehaviour
 {
 	public GatesController GatesController;
+	public AirplaneController AirplaneController;
 
     public float m_terrainSizeMultiplier = 10;      // terrain size = heightmap size * multiplier
     public float m_terrainHeightMultiplier = 0.2f;  // terrain height = terrain size * multiplier
@@ -101,6 +102,7 @@ public class TerrainGenerator : MonoBehaviour
 
 		m_terrainObject.gameObject.AddComponent<CollisionDetector>();
 
+		AirplaneController.InitializePosition (m_terrainObject);
 		GatesController.GenerateGates (m_terrainObject);
     }
 

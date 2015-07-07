@@ -3,7 +3,7 @@ using System.Collections;
 
 public class AirplaneController : MonoBehaviour {
 
-	public float StartHeightDistanceBetweenTerrainAdnAirplane = 500.0f;
+	public float StartHeightDistanceBetweenTerrainAdnAirplane = 200.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -23,6 +23,9 @@ public class AirplaneController : MonoBehaviour {
 		airplanePosition.x = xPosition;
 		airplanePosition.z = zPosition;
 		airplanePosition.y = terrain.SampleHeight (airplanePosition) + StartHeightDistanceBetweenTerrainAdnAirplane;
+
+		gameObject.transform.position = airplanePosition;
+
 		return airplanePosition;
 	}
 }

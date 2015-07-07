@@ -1126,6 +1126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GatesController: {fileID: 454869651}
+  AirplaneController: {fileID: 1988911098}
   m_terrainSizeMultiplier: 10
   m_terrainHeightMultiplier: .200000003
   m_makeSeaLevel: 1
