@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CollsionDetector : MonoBehaviour {
+public class CollisionDetector : MonoBehaviour {
 
 	void OnCollisionEnter(Collision collisionObject) {
 		if (collisionObject.gameObject.name == Constants.AirplaneObjectName) {

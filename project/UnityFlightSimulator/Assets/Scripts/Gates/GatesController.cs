@@ -2,10 +2,8 @@
 using System.Collections;
 
 public class GatesController : MonoBehaviour {
-	private const float _rotationSpeed = 0.5f;
 	public GameObject ActiveGate;
 	public GameObject InactiveGate;
-	public Transform Arrow;
 
 	public GatesPositionsFactory GatesPositionsFactory;
 
@@ -48,8 +46,9 @@ public class GatesController : MonoBehaviour {
 		_gates [_activeGateIndex] = newActiveGate;
 	}
 
-	void Update () {
-		Arrow.LookAt (_gateLocations [_activeGateIndex]);
+	public Vector3 GetPositionOfCurrentActiveGate() 
+	{
+		return _gateLocations [_activeGateIndex];
 	}
 
 	private void EndGameWhenUserWon()

@@ -126,6 +126,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 138438, guid: cf0d7672388abdf4ca6e47ab985879ac, type: 2}
+      propertyPath: m_Name
+      value: ArrowToActiveGate
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf0d7672388abdf4ca6e47ab985879ac, type: 2}
   m_IsPrefabParent: 0
@@ -133,6 +137,22 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 454094, guid: cf0d7672388abdf4ca6e47ab985879ac, type: 2}
   m_PrefabInternal: {fileID: 244871748}
+--- !u!1 &244871750 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 138438, guid: cf0d7672388abdf4ca6e47ab985879ac, type: 2}
+  m_PrefabInternal: {fileID: 244871748}
+--- !u!114 &244871751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 244871750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2960230a5d568794db36e6901adbee18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GatesController: {fileID: 454869651}
 --- !u!1 &292473159
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,7 +342,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 454869649}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 308.4375, y: 27.46875, z: 17.875}
+  m_LocalPosition: {x: 308.437256, y: 27.4686432, z: 17.8746338}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 746902743}
@@ -341,7 +361,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ActiveGate: {fileID: 108258, guid: ed6d337d1db05a54c86b73df84be1492, type: 2}
   InactiveGate: {fileID: 129254, guid: cdf0da82d6e1f2f48bb436e349206632, type: 2}
-  Arrow: {fileID: 244871749}
   GatesPositionsFactory: {fileID: 746902742}
 --- !u!1 &517965308
 GameObject:
@@ -1085,6 +1104,7 @@ GameObject:
   - 4: {fileID: 1257344021}
   - 114: {fileID: 1257344020}
   - 154: {fileID: 1257344023}
+  - 114: {fileID: 1257344022}
   m_Layer: 0
   m_Name: MyTerrain
   m_TagString: Untagged
@@ -1137,6 +1157,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!114 &1257344022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1257344019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 605f30d7cf8e6ea44a8e56d365e62e72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!154 &1257344023
 TerrainCollider:
   m_ObjectHideFlags: 0
