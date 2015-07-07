@@ -6,6 +6,7 @@ public class GatesController : MonoBehaviour {
 	public GameObject InactiveGate;
 
 	public GatesPositionsFactory GatesPositionsFactory;
+	public GatesFactory GatesFactory;
 
 	private ArrayList _gates;
 	private Vector3[] _gateLocations;
@@ -17,19 +18,10 @@ public class GatesController : MonoBehaviour {
 		GenerateGatesForLocations (_gateLocations);
 	}
 
-	private void GenerateGatesForLocations(Vector3[] gateLocations)
+	private void GenerateGatesForLocations (Vector3[] gateLocations)
 	{
-		_gates = new ArrayList ();
-		var newGate = Instantiate (ActiveGate, _gateLocations[0], Quaternion.identity);
-		_gates.Add (newGate);
-		for(int gateIndex = 1; gateIndex < _gateLocations.Length; gateIndex++)
-		{
-			newGate = Instantiate (InactiveGate, _gateLocations[gateIndex], Quaternion.identity);
-			_gates.Add (newGate);
-		}
-		
+		_gates = GatesFactory.InstantiateGatesForLocations (gateLocations, ActiveGate, InactiveGate);
 		_activeGateIndex = 0;
-		
 	}
 
 	public void ShowNextActiveGateOrEndGame()

@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\GameControllers\GameController.cs" />
      <Compile Include="Assets\Scripts\Gates\ActiveGateCollisionDetector.cs" />
      <Compile Include="Assets\Scripts\Gates\GatesController.cs" />
+     <Compile Include="Assets\Scripts\Gates\GatesFactory.cs" />
      <Compile Include="Assets\Scripts\Gates\GatesPositionsFactory.cs" />
      <Compile Include="Assets\Scripts\StartMenu\Form1.cs" />
      <Compile Include="Assets\Scripts\StartMenu\StartMenu.cs" />
