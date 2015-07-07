@@ -3,13 +3,14 @@ using System.Collections;
 
 public class GatesPositionsFactory : MonoBehaviour {
 	public int NumberOfGates = 40;
-	public float DistanceBetweenTerrainAndGate = 100.0f;
+	public float MinHeightDistanceBetweenTerrainAndGate = 50.0f;
+	public float MaxHeightDistanceBetweenTerrainAndGate = 100.0f;
+
+	public float DistanceBetweenTerrainBoundariesAndGate = 200.0f;
 
 	public Vector3[] GetGatesPositions(Terrain terrain, TerrainData terrainData) {
-		var terrainSize = terrainData.size.x;
-		var terrainHeights = terrainData.GetHeights(0,0, 256, 256);
-		var pos = terrain.GetPosition ();
 		var gateLocations = new Vector3[NumberOfGates];
+		InitializeGatePositionRange (terrain, terrainData);
 		for (int i = 0; i < NumberOfGates; i++)
 		{
 			gateLocations[i] = GetGatePosition(terrain);
@@ -18,16 +19,38 @@ public class GatesPositionsFactory : MonoBehaviour {
 		return gateLocations;
 	}
 
-	private float _xL = 285.9f, _xP = 2183.4f; 
-	private float _zD = 302.1f, _zG = 2076.4f;
+	private float _leftXBoundary;
+	private float _rightXBoundary;
+	private float _bottomZBoundary;
+	private float _topZBoundary;
+	private void InitializeGatePositionRange(Terrain terrain, TerrainData terrainData)
+	{
+		var terrainStartPosition = terrain.GetPosition ();
+		_leftXBoundary = terrainStartPosition.x + DistanceBetweenTerrainBoundariesAndGate;
+		_rightXBoundary = terrainData.size.x + terrainStartPosition.x - DistanceBetweenTerrainBoundariesAndGate;
+
+		_bottomZBoundary = terrainStartPosition.z + DistanceBetweenTerrainBoundariesAndGate;
+		_topZBoundary = terrainData.size.z + terrainStartPosition.z - DistanceBetweenTerrainBoundariesAndGate;
+
+		if (_leftXBoundary >= _rightXBoundary || _bottomZBoundary >= _topZBoundary) 
+		{
+			throw new System.ArgumentException("invalid boundaries for gate positions");
+		}
+	}
+
 	private System.Random _random = new System.Random ();
 	private Vector3 GetGatePosition(Terrain terrain)
 	{
+
+
 		Vector3 result = new Vector3 ();
 
-		result.x = (float)_random.NextDouble () * (_xP - _xL) + _xL;
-		result.z = (float)_random.NextDouble () * (_zG - _zD) + _zD;
-		result.y = terrain.SampleHeight (result) + DistanceBetweenTerrainAndGate;
+		result.x = (float)_random.NextDouble () * (_rightXBoundary - _leftXBoundary) + _leftXBoundary;
+		result.z = (float)_random.NextDouble () * (_topZBoundary - _bottomZBoundary) + _bottomZBoundary;
+
+		var heightDistanceBetweenTerrainAndGate = (float)_random.NextDouble () * (MaxHeightDistanceBetweenTerrainAndGate - MinHeightDistanceBetweenTerrainAndGate) 
+			+ MinHeightDistanceBetweenTerrainAndGate;
+		result.y = terrain.SampleHeight (result) + heightDistanceBetweenTerrainAndGate;
 		return result;
 	}
 }
