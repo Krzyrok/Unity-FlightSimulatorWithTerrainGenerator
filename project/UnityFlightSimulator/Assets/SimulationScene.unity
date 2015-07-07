@@ -799,7 +799,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NumberOfGates: 40
-  DistanceBetweenTerrainAndGate: 100
+  MinHeightDistanceBetweenTerrainAndGate: 50
+  MaxHeightDistanceBetweenTerrainAndGate: 100
+  DistanceBetweenTerrainBoundariesAndGate: 200
 --- !u!4 &746902743
 Transform:
   m_ObjectHideFlags: 0

@@ -101,7 +101,7 @@ public class MyTerrain : MonoBehaviour
 
 		m_terrainObject.gameObject.AddComponent<CollisionDetector>();
 
-		GatesController.GenerateGates (m_terrainObject, m_terrainData);
+		GatesController.GenerateGates (m_terrainObject);
     }
 
     // Update is called once per frame

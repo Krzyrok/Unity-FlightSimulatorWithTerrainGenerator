@@ -12,7 +12,7 @@ public class ActiveGateCollisionDetector : MonoBehaviour {
 	void OnCollisionEnter(Collision collisionObject) {
 		if (collisionObject.gameObject.name == Constants.AirplaneObjectName) {
 			ScoreTextController.AddScore(1);
-			_gatesController.GenerateNextActiveGateOrEndGame();
+			_gatesController.ShowNextActiveGateOrEndGame();
 		}
 	}
 }

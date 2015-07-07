@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Airplane\AirplaneController.cs" />
      <Compile Include="Assets\Scripts\Airplane\AirplaneMovement.cs" />
      <Compile Include="Assets\Scripts\ArrowController.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraSwitcher.cs" />

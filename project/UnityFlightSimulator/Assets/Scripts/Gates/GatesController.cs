@@ -11,9 +11,9 @@ public class GatesController : MonoBehaviour {
 	private Vector3[] _gateLocations;
 	private int _activeGateIndex;
 
-	public void GenerateGates(Terrain terrain, TerrainData terrainData) {
+	public void GenerateGates(Terrain terrain) {
 		_gates = new ArrayList ();
-		_gateLocations = GatesPositionsFactory.GetGatesPositions (terrain, terrainData);
+		_gateLocations = GatesPositionsFactory.GetGatesPositions (terrain);
 
 		var newGate = Instantiate (ActiveGate, _gateLocations[0], Quaternion.identity);
 		_gates.Add (newGate);
@@ -26,7 +26,7 @@ public class GatesController : MonoBehaviour {
 		_activeGateIndex = 0;
 	}
 
-	public void GenerateNextActiveGateOrEndGame()
+	public void ShowNextActiveGateOrEndGame()
 	{
 		var activeGateToDestroy = (GameObject)_gates[_activeGateIndex];
 		Destroy (activeGateToDestroy);
