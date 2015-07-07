@@ -14,7 +14,13 @@ public class GatesController : MonoBehaviour {
 
 	public void GenerateGatesRandomly(Terrain terrain) 
 	{
-		_gateLocations = GatesPositionsFactory.GetGatesRandomPositions (terrain);
+		_gateLocations = GatesPositionsFactory.GetGateRandomPositions (terrain);
+		GenerateGatesForLocations (_gateLocations);
+	}
+
+	public void GenerateGatesWithPartiallyRandomPosition(Terrain terrain, Vector3 airplaneStartPosition)
+	{
+		_gateLocations = GatesPositionsFactory.GetGatePartiallyRandomPositions (terrain, airplaneStartPosition);
 		GenerateGatesForLocations (_gateLocations);
 	}
 

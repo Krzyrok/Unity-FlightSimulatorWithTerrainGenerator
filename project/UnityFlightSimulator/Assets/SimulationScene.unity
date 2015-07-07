@@ -804,6 +804,8 @@ MonoBehaviour:
   MinHeightDistanceBetweenTerrainAndGate: 50
   MaxHeightDistanceBetweenTerrainAndGate: 100
   DistanceBetweenTerrainBoundariesAndGate: 200
+  AllowedXDistanceBetweenGates: 400
+  AllowedZDistanceBetweenGates: 400
 --- !u!4 &746902743
 Transform:
   m_ObjectHideFlags: 0
@@ -1507,7 +1509,7 @@ Transform:
   m_PrefabParentObject: {fileID: 468584, guid: c0ac0474b5c90a1419d4417431276924, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1988911095}
-  m_LocalRotation: {x: -.653862059, y: .300129563, z: .316256672, w: .618359506}
+  m_LocalRotation: {x: -1.1520229e-07, y: -.707106948, z: -.70710659, w: 1.15202347e-07}
   m_LocalPosition: {x: 1959.09998, y: 225.300003, z: 823.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
