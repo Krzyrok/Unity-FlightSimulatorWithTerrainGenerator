@@ -545,7 +545,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
-  m_StereoMirrorMode: 0
 --- !u!20 &2009480
 Camera:
   m_ObjectHideFlags: 1
@@ -578,7 +577,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
-  m_StereoMirrorMode: 0
 --- !u!20 &2058922
 Camera:
   m_ObjectHideFlags: 1
@@ -611,7 +609,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
-  m_StereoMirrorMode: 0
 --- !u!20 &2095980
 Camera:
   m_ObjectHideFlags: 1
@@ -644,7 +641,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
-  m_StereoMirrorMode: 0
 --- !u!23 &2302624
 MeshRenderer:
   m_ObjectHideFlags: 1

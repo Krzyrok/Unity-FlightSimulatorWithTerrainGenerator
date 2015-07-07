@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActiveGate: {fileID: 108258, guid: ed6d337d1db05a54c86b73df84be1492, type: 2}
-  InactiveGate: {fileID: 129254, guid: cdf0da82d6e1f2f48bb436e349206632, type: 2}
+  InactiveGate: {fileID: 107168, guid: 5ec5bdf498d6cb8409abb2c783026540, type: 2}
   GatesPositionsFactory: {fileID: 746902742}
 --- !u!1 &517965308
 GameObject:
