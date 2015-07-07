@@ -102,8 +102,8 @@ public class TerrainGenerator : MonoBehaviour
 
 		m_terrainObject.gameObject.AddComponent<CollisionDetector>();
 
-		AirplaneController.InitializePosition (m_terrainObject);
-		GatesController.GenerateGates (m_terrainObject);
+		var airplaneStartPosition = AirplaneController.InitializePosition (m_terrainObject);
+		GatesController.GenerateGatesRandomly (m_terrainObject);
     }
 
     // Update is called once per frame

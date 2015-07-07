@@ -11,10 +11,15 @@ public class GatesController : MonoBehaviour {
 	private Vector3[] _gateLocations;
 	private int _activeGateIndex;
 
-	public void GenerateGates(Terrain terrain) {
-		_gates = new ArrayList ();
-		_gateLocations = GatesPositionsFactory.GetGatesPositions (terrain);
+	public void GenerateGatesRandomly(Terrain terrain) 
+	{
+		_gateLocations = GatesPositionsFactory.GetGatesRandomPositions (terrain);
+		GenerateGatesForLocations (_gateLocations);
+	}
 
+	private void GenerateGatesForLocations(Vector3[] gateLocations)
+	{
+		_gates = new ArrayList ();
 		var newGate = Instantiate (ActiveGate, _gateLocations[0], Quaternion.identity);
 		_gates.Add (newGate);
 		for(int gateIndex = 1; gateIndex < _gateLocations.Length; gateIndex++)
@@ -24,6 +29,7 @@ public class GatesController : MonoBehaviour {
 		}
 		
 		_activeGateIndex = 0;
+		
 	}
 
 	public void ShowNextActiveGateOrEndGame()

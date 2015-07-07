@@ -8,12 +8,13 @@ public class GatesPositionsFactory : MonoBehaviour {
 
 	public float DistanceBetweenTerrainBoundariesAndGate = 200.0f;
 
-	public Vector3[] GetGatesPositions(Terrain terrain) {
-		var gateLocations = new Vector3[NumberOfGates];
+	public Vector3[] GetGatesRandomPositions(Terrain terrain) {
 		InitializeGatePositionRange (terrain);
+
+		var gateLocations = new Vector3[NumberOfGates];
 		for (int i = 0; i < NumberOfGates; i++)
 		{
-			gateLocations[i] = GetGatePosition(terrain);
+			gateLocations[i] = GetGateRandomPosition(terrain);
 		}
 
 		return gateLocations;
@@ -39,7 +40,7 @@ public class GatesPositionsFactory : MonoBehaviour {
 	}
 
 	private System.Random _random = new System.Random ();
-	private Vector3 GetGatePosition(Terrain terrain)
+	private Vector3 GetGateRandomPosition(Terrain terrain)
 	{
 		Vector3 result = new Vector3 ();
 		result.x = (float)_random.NextDouble () * (_rightXBoundary - _leftXBoundary) + _leftXBoundary;
