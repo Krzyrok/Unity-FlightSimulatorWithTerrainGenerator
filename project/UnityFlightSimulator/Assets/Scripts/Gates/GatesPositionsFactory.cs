@@ -69,23 +69,21 @@ public class GatesPositionsFactory : MonoBehaviour {
 	}
 
 	private int _moveForward = 1;
-	private Vector3 GetGatePositionAccordingToThePassedPosition(Terrain terrain, Vector3 position)
+	private Vector3 GetGatePositionAccordingToThePassedPosition(Terrain terrain, Vector3 previousPosition)
 	{
-		var passedXPosition = position.x;
-		var passedZPosition = position.z;
 		Vector3 result = new Vector3 ();
 
-		result.x = passedXPosition + (float)_random.NextDouble () * AllowedXDistanceBetweenGates - AllowedXDistanceBetweenGates / 2.0f;
+		result.x = previousPosition.x + (float)_random.NextDouble () * AllowedXDistanceBetweenGates - AllowedXDistanceBetweenGates / 2.0f;
 		if (result.x <= _leftXBoundary + DistanceBetweenTerrainBoundariesAndGate || result.x >= _rightXBoundary - DistanceBetweenTerrainBoundariesAndGate) 
 		{
 			result.x = (float)_random.NextDouble () * (_rightXBoundary - _leftXBoundary) + _leftXBoundary;
 		}
 
-		result.z = passedZPosition + _moveForward * (float)_random.NextDouble () * AllowedZDistanceBetweenGates;
-		if (result.z <= _bottomZBoundary + DistanceBetweenTerrainBoundariesAndGate || result.z >= _topZBoundary - DistanceBetweenTerrainBoundariesAndGate) 
+		result.z = previousPosition.z + _moveForward * (float)_random.NextDouble () * AllowedZDistanceBetweenGates;
+		while (result.z <= _bottomZBoundary + DistanceBetweenTerrainBoundariesAndGate || result.z >= _topZBoundary - DistanceBetweenTerrainBoundariesAndGate) 
 		{
 			_moveForward *= -1;
-			result.z = passedZPosition + _moveForward * (float)_random.NextDouble () * AllowedZDistanceBetweenGates;
+			result.z = previousPosition.z + _moveForward * (float)_random.NextDouble () * AllowedZDistanceBetweenGates;
 		}
 
 		var heightDistanceBetweenTerrainAndGate = (float)_random.NextDouble () * (MaxHeightDistanceBetweenTerrainAndGate - MinHeightDistanceBetweenTerrainAndGate) 
