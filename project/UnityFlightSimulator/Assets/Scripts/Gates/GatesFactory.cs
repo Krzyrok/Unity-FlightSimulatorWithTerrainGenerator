@@ -6,15 +6,15 @@ public class GatesFactory : MonoBehaviour {
 	public float VerticalAngleDeviationWhenGateShouldBeElavated = 40.0f;
 	public float UpwardTranslationWhenGateIsAlmostHorizontal = 100.0f;
 
-	public ArrayList InstantiateGatesForLocations(Vector3[] gateLocations, GameObject activeGate, GameObject inactiveGate)
+	public ArrayList InstantiateGatesForPositions(Vector3[] gatePositions, GameObject activeGate, GameObject inactiveGate)
 	{
 		var gates = new ArrayList ();
-		var newGate = Instantiate (activeGate, gateLocations[0], Quaternion.identity);
+		var newGate = Instantiate (activeGate, gatePositions[0], Quaternion.identity);
 		gates.Add (newGate);
-		for(int gateIndex = 1; gateIndex < gateLocations.Length; gateIndex++)
+		for(int gateIndex = 1; gateIndex < gatePositions.Length; gateIndex++)
 		{
 			var quaternion = GetRandomQuaternion();
-			newGate = Instantiate (inactiveGate, gateLocations[gateIndex], quaternion);
+			newGate = Instantiate (inactiveGate, gatePositions[gateIndex], quaternion);
 			var gateGameObject = (GameObject)newGate;
 			if (GateIsRotatedHorizontally(gateGameObject.transform.rotation.eulerAngles))
 			{

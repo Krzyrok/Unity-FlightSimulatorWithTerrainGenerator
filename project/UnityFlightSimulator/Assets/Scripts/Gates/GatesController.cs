@@ -9,24 +9,24 @@ public class GatesController : MonoBehaviour {
 	public GatesFactory GatesFactory;
 
 	private ArrayList _gates;
-	private Vector3[] _gateLocations;
+	private Vector3[] _gatePositions;
 	private int _activeGateIndex;
 
 	public void GenerateGatesRandomly(Terrain terrain) 
 	{
-		_gateLocations = GatesPositionsFactory.GetGateRandomPositions (terrain);
-		GenerateGatesForLocations (_gateLocations);
+		_gatePositions = GatesPositionsFactory.GetGateRandomPositions (terrain);
+		GenerateGatesForPositions (_gatePositions);
 	}
 
 	public void GenerateGatesWithPartiallyRandomPosition(Terrain terrain, Vector3 airplaneStartPosition)
 	{
-		_gateLocations = GatesPositionsFactory.GetGatePartiallyRandomPositions (terrain, airplaneStartPosition);
-		GenerateGatesForLocations (_gateLocations);
+		_gatePositions = GatesPositionsFactory.GetGatePartiallyRandomPositions (terrain, airplaneStartPosition);
+		GenerateGatesForPositions (_gatePositions);
 	}
 
-	private void GenerateGatesForLocations (Vector3[] gateLocations)
+	private void GenerateGatesForPositions (Vector3[] gatePositions)
 	{
-		_gates = GatesFactory.InstantiateGatesForLocations (gateLocations, ActiveGate, InactiveGate);
+		_gates = GatesFactory.InstantiateGatesForPositions (gatePositions, ActiveGate, InactiveGate);
 		_activeGateIndex = 0;
 	}
 
@@ -36,7 +36,7 @@ public class GatesController : MonoBehaviour {
 		Destroy (activeGateToDestroy);
 
 		var nextInaxtiveGateIndex = _activeGateIndex + 1;
-		if (nextInaxtiveGateIndex == _gateLocations.Length) 
+		if (nextInaxtiveGateIndex == _gatePositions.Length) 
 		{
 			EndGameWhenUserWon();
 			return;
@@ -46,13 +46,13 @@ public class GatesController : MonoBehaviour {
 		Destroy (nextInaxtiveGateToDestroy);
 		
 		_activeGateIndex++;
-		var newActiveGate = Instantiate (ActiveGate, _gateLocations[_activeGateIndex], Quaternion.identity);
+		var newActiveGate = Instantiate (ActiveGate, _gatePositions[_activeGateIndex], Quaternion.identity);
 		_gates [_activeGateIndex] = newActiveGate;
 	}
 
 	public Vector3 GetPositionOfCurrentActiveGate() 
 	{
-		return _gateLocations [_activeGateIndex];
+		return _gatePositions [_activeGateIndex];
 	}
 
 	private void EndGameWhenUserWon()

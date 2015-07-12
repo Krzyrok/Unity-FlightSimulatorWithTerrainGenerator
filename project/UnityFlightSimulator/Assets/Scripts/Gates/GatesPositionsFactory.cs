@@ -14,26 +14,26 @@ public class GatesPositionsFactory : MonoBehaviour {
 	public Vector3[] GetGateRandomPositions(Terrain terrain) {
 		InitializeGatePositionRange (terrain);
 
-		var gateLocations = new Vector3[NumberOfGates];
+		var gatePositions = new Vector3[NumberOfGates];
 		for (int i = 0; i < NumberOfGates; i++)
 		{
-			gateLocations[i] = GetGateRandomPosition(terrain);
+			gatePositions[i] = GetGateRandomPosition(terrain);
 		}
 
-		return gateLocations;
+		return gatePositions;
 	}
 
 	public Vector3[] GetGatePartiallyRandomPositions(Terrain terrain, Vector3 airplaneStartPosition) {
 		InitializeGatePositionRange (terrain);
 		
-		var gateLocations = new Vector3[NumberOfGates];
-		gateLocations[0] = GetGatePositionAccordingToThePassedPosition(terrain, airplaneStartPosition);
+		var gatePositions = new Vector3[NumberOfGates];
+		gatePositions[0] = GetGatePositionAccordingToThePassedPosition(terrain, airplaneStartPosition);
 		for (int i = 1; i < NumberOfGates; i++)
 		{
-			gateLocations[i] = GetGatePositionAccordingToThePassedPosition(terrain, gateLocations[i-1]);
+			gatePositions[i] = GetGatePositionAccordingToThePassedPosition(terrain, gatePositions[i-1]);
 		}
 		
-		return gateLocations;
+		return gatePositions;
 	}
 
 	private float _leftXBoundary;
