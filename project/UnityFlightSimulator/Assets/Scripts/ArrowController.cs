@@ -12,6 +12,6 @@ public class ArrowController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		gameObject.transform.LookAt (GatesController.GetPositionOfCurrentActiveGate ());
+		gameObject.transform.LookAt (GatesController.GetPositionOfActiveGate ());
 	}
 }

@@ -50,7 +50,7 @@ public class GatesController : MonoBehaviour {
 		_gates [_activeGateIndex] = newActiveGate;
 	}
 
-	public Vector3 GetPositionOfCurrentActiveGate() 
+	public Vector3 GetPositionOfActiveGate() 
 	{
 		return _gatePositions [_activeGateIndex];
 	}
