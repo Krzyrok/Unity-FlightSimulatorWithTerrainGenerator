@@ -20,7 +20,7 @@ Platform assembly: C:\Programowanie\Unity\unityflightsimulator\project\UnityFlig
 Loading C:\Programowanie\Unity\unityflightsimulator\project\UnityFlightSimulator\FlightSimulator_Data\Managed\System.Drawing.dll into Unity Child Domain
 Platform assembly: C:\Programowanie\Unity\unityflightsimulator\project\UnityFlightSimulator\FlightSimulator_Data\Managed\System.Windows.Forms.dll (this message is harmless)
 Loading C:\Programowanie\Unity\unityflightsimulator\project\UnityFlightSimulator\FlightSimulator_Data\Managed\System.Windows.Forms.dll into Unity Child Domain
-- Completed reload, in  0.261 seconds
+- Completed reload, in  0.256 seconds
 desktop: 1920x1080 60Hz; virtual: 3286x1080 at -1366,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -52,17 +52,13 @@ Fallback handler could not load library C:/Programowanie/Unity/unityflightsimula
 Fallback handler could not load library C:/Programowanie/Unity/unityflightsimulator/project/UnityFlightSimulator/FlightSimulator_Data/Mono/lib/System/Library/Frameworks/Carbon.framework/Versions/Current/Carbon
 Platform assembly: C:\Programowanie\Unity\unityflightsimulator\project\UnityFlightSimulator\FlightSimulator_Data\Managed\System.Xml.dll (this message is harmless)
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1a20 -> priority: 1 
-  Thread -> id: 263c -> priority: 1 
+  Thread -> id: 3334 -> priority: 1 
+  Thread -> id: 330c -> priority: 1 
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.942938 ms
+UnloadTime: 0.637605 ms
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 429.
-Total: 1.145210 ms (FindLiveObjects: 0.073125 ms CreateObjectMapping: 0.057730 ms MarkObjects: 0.989123 ms  DeleteObjects: 0.023520 ms)
-
-Failed to get pixels of splat texture
- 
-(Filename:  Line: 248)
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 440.
+Total: 1.119552 ms (FindLiveObjects: 0.053454 ms CreateObjectMapping: 0.035921 ms MarkObjects: 0.726126 ms  DeleteObjects: 0.301911 ms)
 
 Failed to get pixels of splat texture
  
@@ -84,13 +80,9 @@ Failed to get pixels of splat texture
  
 (Filename:  Line: 248)
 
-Unable to find shaders used for the terrain engine. Please include Nature/Terrain/Diffuse shader in Graphics settings.
+Failed to get pixels of splat texture
  
-(Filename:  Line: 383)
-
-Unable to find shaders used for the terrain engine. Please include Nature/Terrain/Diffuse shader in Graphics settings.
- 
-(Filename:  Line: 65)
+(Filename:  Line: 248)
 
 Failed to get pixels of splat texture
  
