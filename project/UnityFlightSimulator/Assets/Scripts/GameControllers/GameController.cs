@@ -2,16 +2,16 @@
 using System.Collections;
 
 public class GameController : MonoBehaviour {
-	static bool isGameOver = false;
+	private static bool _isGameOver = false;
 	// Use this for initialization
 	void Start () {
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (isGameOver && Input.GetKeyDown(KeyCode.R))
+		if (_isGameOver && Input.GetKeyDown(KeyCode.R))
 		{
-			isGameOver = false;
+			_isGameOver = false;
 			Time.timeScale = 1.0f;
 			Application.LoadLevel(Application.loadedLevel);
 		}
@@ -20,7 +20,7 @@ public class GameController : MonoBehaviour {
 	}
 
 	public static void EndGame() {
-		isGameOver = true;
+		_isGameOver = true;
 		Time.timeScale = 0.0f;
 	}
 

@@ -3,15 +3,15 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class GameOverTextController : MonoBehaviour {
-	static Text gameOverText;
+	private static Text _scoreText;
 
 	// Use this for initialization
 	void Start () {
-		gameOverText = GetComponent<Text> ();
-		gameOverText.text = "";
+		_scoreText = GetComponent<Text> ();
+		_scoreText.text = "";
 	}
 
 	public static void ShowGameOverText() {
-		gameOverText.text = "Game Over\nPress 'R' to restart";
+		_scoreText.text = "Game Over\nPress 'R' to restart";
 	}
 }

@@ -3,15 +3,14 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class TimeTextController : MonoBehaviour {
-
-	static Text timeText;
+	private static Text _timeText;
 	
 	// Use this for initialization
 	void Start () {
-		timeText = GetComponent<Text>();
+		_timeText = GetComponent<Text>();
 	}
 	
 	public static void UpdateTimeText(string timeToDisplay) {
-		timeText.text = "Time: " + timeToDisplay;
+		_timeText.text = "Time: " + timeToDisplay;
 	}
 }

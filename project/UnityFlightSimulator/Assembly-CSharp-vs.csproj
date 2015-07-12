@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\Terrain\TerrainGenerator.cs" />
      <Compile Include="Assets\Scripts\Texts\GameOverTextController.cs" />
      <Compile Include="Assets\Scripts\Texts\ScoreTextController.cs" />
+     <Compile Include="Assets\Scripts\Texts\SpeedTextController.cs" />
      <Compile Include="Assets\Scripts\Texts\TimeTextController.cs" />
      <Compile Include="Assets\Scripts\User\UserController.cs" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />

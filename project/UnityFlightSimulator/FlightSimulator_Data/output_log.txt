@@ -20,7 +20,7 @@ Platform assembly: C:\Programowanie\Unity\unityflightsimulator\project\UnityFlig
 Loading C:\Programowanie\Unity\unityflightsimulator\project\UnityFlightSimulator\FlightSimulator_Data\Managed\System.Drawing.dll into Unity Child Domain
 Platform assembly: C:\Programowanie\Unity\unityflightsimulator\project\UnityFlightSimulator\FlightSimulator_Data\Managed\System.Windows.Forms.dll (this message is harmless)
 Loading C:\Programowanie\Unity\unityflightsimulator\project\UnityFlightSimulator\FlightSimulator_Data\Managed\System.Windows.Forms.dll into Unity Child Domain
-- Completed reload, in  0.256 seconds
+- Completed reload, in  0.139 seconds
 desktop: 1920x1080 60Hz; virtual: 3286x1080 at -1366,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -52,13 +52,13 @@ Fallback handler could not load library C:/Programowanie/Unity/unityflightsimula
 Fallback handler could not load library C:/Programowanie/Unity/unityflightsimulator/project/UnityFlightSimulator/FlightSimulator_Data/Mono/lib/System/Library/Frameworks/Carbon.framework/Versions/Current/Carbon
 Platform assembly: C:\Programowanie\Unity\unityflightsimulator\project\UnityFlightSimulator\FlightSimulator_Data\Managed\System.Xml.dll (this message is harmless)
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 3334 -> priority: 1 
-  Thread -> id: 330c -> priority: 1 
+  Thread -> id: 28b0 -> priority: 1 
+  Thread -> id: 2edc -> priority: 1 
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.637605 ms
+UnloadTime: 0.628197 ms
 
 Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 440.
-Total: 1.119552 ms (FindLiveObjects: 0.053454 ms CreateObjectMapping: 0.035921 ms MarkObjects: 0.726126 ms  DeleteObjects: 0.301911 ms)
+Total: 1.265376 ms (FindLiveObjects: 0.066711 ms CreateObjectMapping: 0.040625 ms MarkObjects: 0.816785 ms  DeleteObjects: 0.339543 ms)
 
 Failed to get pixels of splat texture
  

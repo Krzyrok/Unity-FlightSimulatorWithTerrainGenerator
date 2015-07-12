@@ -1112,8 +1112,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a7a4bd2afad9194fa2dc2e1d4bc9c4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AirplaneForwardSpeed: 20
-  AirplaneSteeringSpeed: 15
+  AirplaneForwardSpeed: 60
+  MaximumAirplaneForwardSpeed: 100
+  MinimumAirplaneForwardSpeed: 20
+  AirplaneAccelerationSpeed: 20
+  AirplaneSteeringSpeed: 40
   EngineSound: {fileID: 8294574}
 --- !u!114 &11496346
 MonoBehaviour:

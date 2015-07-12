@@ -3,15 +3,15 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class ScoreTextController : MonoBehaviour {
-	static Text scoreText;
+	private static Text _scoreText;
 
 	// Use this for initialization
 	void Start () {
-		scoreText = GetComponent<Text>();
+		_scoreText = GetComponent<Text>();
 		UpdateScoreText ("0");
 	}
 
 	public static void UpdateScoreText(string score) {
-		scoreText.text = "Your score: " + score;
+		_scoreText.text = "Your score: " + score;
 	}
 }
