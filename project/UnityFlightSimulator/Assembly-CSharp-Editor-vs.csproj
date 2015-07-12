@@ -64,13 +64,13 @@
  <HintPath>C:/Programy/Programowanie/Unity5/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="System.Data">
- <HintPath>C:/Users/Krzysztof/Desktop/MO3D/unityflightsimulator/project/UnityFlightSimulator/Assets/Plugins/System.Data.dll</HintPath>
+ <HintPath>C:/Programowanie/Unity/unityflightsimulator/project/UnityFlightSimulator/Assets/Plugins/System.Data.dll</HintPath>
  </Reference>
  <Reference Include="System.Drawing">
- <HintPath>C:/Users/Krzysztof/Desktop/MO3D/unityflightsimulator/project/UnityFlightSimulator/Assets/Plugins/System.Drawing.dll</HintPath>
+ <HintPath>C:/Programowanie/Unity/unityflightsimulator/project/UnityFlightSimulator/Assets/Plugins/System.Drawing.dll</HintPath>
  </Reference>
  <Reference Include="System.Windows.Forms">
- <HintPath>C:/Users/Krzysztof/Desktop/MO3D/unityflightsimulator/project/UnityFlightSimulator/Assets/Plugins/System.Windows.Forms.dll</HintPath>
+ <HintPath>C:/Programowanie/Unity/unityflightsimulator/project/UnityFlightSimulator/Assets/Plugins/System.Windows.Forms.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Programy/Programowanie/Unity5/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>

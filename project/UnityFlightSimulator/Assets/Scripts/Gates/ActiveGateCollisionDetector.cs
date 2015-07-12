@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class ActiveGateCollisionDetector : MonoBehaviour {
+	public int PointsForPassedGate = 1;
 	private GatesController _gatesController;
 
 	void Awake () {
@@ -9,9 +10,11 @@ public class ActiveGateCollisionDetector : MonoBehaviour {
 		_gatesController = gatesControllerObject.GetComponent<GatesController> ();
 	}
 
-	void OnCollisionEnter(Collision collisionObject) {
-		if (collisionObject.gameObject.name == Constants.AirplaneObjectName) {
-			ScoreTextController.AddScore(1);
+	void OnTriggerEnter(Collider collider)
+	{
+		if (collider.gameObject.name == Constants.AirplaneObjectName) {
+			var userController = collider.gameObject.GetComponent<UserController>();
+			userController.AddScore(PointsForPassedGate);
 			_gatesController.ShowNextActiveGateOrEndGame();
 		}
 	}

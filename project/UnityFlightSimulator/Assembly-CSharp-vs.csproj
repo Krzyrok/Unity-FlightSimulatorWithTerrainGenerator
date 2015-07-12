@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\Texts\GameOverTextController.cs" />
      <Compile Include="Assets\Scripts\Texts\ScoreTextController.cs" />
      <Compile Include="Assets\Scripts\Texts\TimeTextController.cs" />
+     <Compile Include="Assets\Scripts\User\UserController.cs" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\Resources\results\map_raw.txt" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
@@ -78,13 +79,13 @@
  <HintPath>C:/Programy/Programowanie/Unity5/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="System.Data">
- <HintPath>C:/Users/Krzysztof/Desktop/MO3D/unityflightsimulator/project/UnityFlightSimulator/Assets/Plugins/System.Data.dll</HintPath>
+ <HintPath>C:/Programowanie/Unity/unityflightsimulator/project/UnityFlightSimulator/Assets/Plugins/System.Data.dll</HintPath>
  </Reference>
  <Reference Include="System.Drawing">
- <HintPath>C:/Users/Krzysztof/Desktop/MO3D/unityflightsimulator/project/UnityFlightSimulator/Assets/Plugins/System.Drawing.dll</HintPath>
+ <HintPath>C:/Programowanie/Unity/unityflightsimulator/project/UnityFlightSimulator/Assets/Plugins/System.Drawing.dll</HintPath>
  </Reference>
  <Reference Include="System.Windows.Forms">
- <HintPath>C:/Users/Krzysztof/Desktop/MO3D/unityflightsimulator/project/UnityFlightSimulator/Assets/Plugins/System.Windows.Forms.dll</HintPath>
+ <HintPath>C:/Programowanie/Unity/unityflightsimulator/project/UnityFlightSimulator/Assets/Plugins/System.Windows.Forms.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Programy/Programowanie/Unity5/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
