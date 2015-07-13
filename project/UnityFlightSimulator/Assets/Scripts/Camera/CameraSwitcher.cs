@@ -14,25 +14,25 @@ public class CameraSwitcher : MonoBehaviour {
 	}
 	
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.F1))
+		if (Input.GetKeyDown(KeyCode.Alpha1)|| Input.GetKeyDown(KeyCode.Keypad1))
 		{
 			DisableAllCameras();
 			RearCamera.enabled = true;
 			RearCamera.GetComponent <AudioListener>().enabled = true;
 		}
-		else if (Input.GetKeyDown(KeyCode.F2))
+		else if (Input.GetKeyDown(KeyCode.Alpha2)|| Input.GetKeyDown(KeyCode.Keypad2))
 		{
 			DisableAllCameras();
 			FirstPerspectiveCamera.enabled = true;
 			FirstPerspectiveCamera.GetComponent <AudioListener>().enabled = true;
 		}
-		else if (Input.GetKeyDown(KeyCode.F3))
+		else if (Input.GetKeyDown(KeyCode.Alpha3)|| Input.GetKeyDown(KeyCode.Keypad3))
 		{
 			DisableAllCameras();
 			UpCamera.enabled = true;
 			UpCamera.GetComponent <AudioListener>().enabled = true;
 		}
-		else if (Input.GetKeyDown(KeyCode.F4))
+		else if (Input.GetKeyDown(KeyCode.Alpha4)|| Input.GetKeyDown(KeyCode.Keypad4))
 		{
 			DisableAllCameras();
 			LeftSideCamera.enabled = true;
