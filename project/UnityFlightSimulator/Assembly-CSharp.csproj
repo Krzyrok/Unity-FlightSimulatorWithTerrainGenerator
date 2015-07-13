@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\Terrain\PerlinNoise.cs" />
      <Compile Include="Assets\Scripts\Terrain\TerrainGenerator.cs" />
      <Compile Include="Assets\Scripts\Texts\GameOverTextController.cs" />
+     <Compile Include="Assets\Scripts\Texts\HelpTextController.cs" />
      <Compile Include="Assets\Scripts\Texts\ScoreTextController.cs" />
      <Compile Include="Assets\Scripts\Texts\SpeedTextController.cs" />
      <Compile Include="Assets\Scripts\Texts\TimeTextController.cs" />
